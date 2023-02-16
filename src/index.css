@@ -1,0 +1,70 @@
+/* google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+/* wolt @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap'); */
+
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  color: #000000;
+  background-color: #212124;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 0.1px rgb(5, 5, 5) solid;
+}
+::-webkit-scrollbar-thumb {
+  background: #dfdfdf;
+  border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f5f5f5;
+}
+/* base style */
+
+body {
+  background: #ffffff;
+  font-family: "Istok Web", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "RocknRoll One", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  transition: 0.4s;
+}
+a:hover {
+  transform: scale(1.07);
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #212245;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0px 200px;
+  height: 100%;
+}

@@ -1,0 +1,216 @@
+@import "./components/Header.scss";
+@import "../index.css";
+@import "../style/pages/Home.scss";
+
+@media only screen and (max-width: 1222px) {
+    .header {
+        // height: 65px;
+        flex-wrap: wrap;
+        li {
+            margin-left: 50px;
+        }
+    }
+    .container {
+        padding: 0px 70px;
+    }
+    .line {
+        width: 180px;
+    }
+    .cart__title {
+        max-width: 200px;
+    }
+    .footer__bottom {
+        padding: 0px 70px;
+    }
+}
+@media only screen and (max-width: 885px) {
+    .header {
+        li {
+            margin-left: 30px;
+        }
+    }
+    .line {
+        width: 60px !important;
+    }
+    .subtotal {
+        flex-wrap: wrap;
+        padding: 0 1px !important;
+    }
+    .price__delivery {
+        padding: 0 10px !important;
+    }
+    .footer__bottom {
+        padding: 0px 40px;
+    }
+    .contact__card {
+        height: 250px !important;
+        width: 300px !important;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    .contact__cards {
+        flex-wrap: wrap;
+    }
+    .cart__title {
+        margin-left: 10px !important;
+        font-size: 18px !important;
+    }
+}
+//tablet
+@media only screen and (max-width: 768px) {
+    .header {
+        li {
+            margin-left: 35px;
+        }
+    }
+    .container {
+        padding: 0px 12px;
+    }
+    .nav__mid {
+        display: none;
+        .cart__icon {
+            display: block !important;
+        }
+    }
+    .burger__menu {
+        display: block !important;
+    }
+    .right__nav {
+        display: flex;
+    }
+    .footer__bottom .left__bot p {
+        margin-right: 25px !important;
+        font-size: 14px;
+    }
+    .footer__bottom {
+        padding: 0px 30px;
+    }
+    .feature__subtitle {
+        display: none !important;
+    }
+    .cart__flex {
+        .container {
+            display: block !important;
+        }
+    }
+    .all__carts {
+        width: 100%;
+        .cart {
+            padding-left: 2px !important;
+        }
+        .carts {
+            margin-left: 9px !important;
+        }
+        .cart__details {
+            h5 {
+                width: 140px !important;
+            }
+        }
+        .counter {
+            left: 140px !important;
+        }
+    }
+    .total__div {
+        width: 85% !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .contact__card {
+        margin-left: 10px;
+        height: 300px !important;
+        width: 100% !important;
+        margin-top: 20px;
+        margin-right: 20px;
+        p {
+            font-size: 24px !important;
+        }
+        h5 {
+            font-size: 26px !important;
+        }
+    }
+}
+@media only screen and (max-width: 576px) {
+    .footer__bottom {
+        padding: 0px 10px;
+        .left__bot {
+            p {
+                margin-right: 10px !important;
+            }
+        }
+        .right__bot {
+            li {
+                margin-left: 20px !important;
+            }
+        }
+    }
+    .container {
+        padding: 0px 7px;
+    }
+    .card {
+        width: 380px !important;
+        height: 550px !important;
+        img {
+            height: 100% !important;
+        }
+        .cart__icon {
+            left: 17px !important;
+        }
+    }
+
+    .card__main {
+        button {
+            width: 345px !important;
+            height: 47px !important;
+        }
+    }
+    .contact__card {
+        // margin-left: 5px;
+        // margin-right: 5px;
+        margin-left: 0px;
+
+        height: 300px !important;
+        width: 100% !important;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .MuiBox-root button {
+        margin-right: 5px !important;
+    }
+    .MuiBox-root button {
+        margin-right: 0px !important;
+    }
+    .cart {
+        img {
+            width: 90px !important;
+            height: 100%;
+        }
+    }
+}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// .MuiBox-root button {
+//     margin-right: 5px !important;
+// }
+// .MuiBox-root button {
+// margin-right: -26px !important;
+// }

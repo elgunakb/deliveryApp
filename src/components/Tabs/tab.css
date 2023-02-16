@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+.MuiButtonBase-root {
+  color: rgb(255, 255, 255) !important;
+  font-family: "RocknRoll One", sans-serif;
+}
+.MuiTabs-indicator {
+  background-color: white !important;
+}
+.MuiBox-root button {
+  margin-right: 15px !important;
+}
+.MuiBox-root {
+  border-radius: 12px !important;
+  height: 57px !important;
+  
+}
+.MuiBox-root img {
+    width: 50px;
+    height: 50px;
+  }
