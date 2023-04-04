@@ -1,10 +1,42 @@
 @import "./components/Header.scss";
 @import "../index.css";
 @import "../style/pages/Home.scss";
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1 1 auto;
+}
+// .card__main
+@media only screen and (max-width: 1520px) {
+    .slide__btn {
+        display: none;
+    }
+    .card__main {
+        width: 950px;
+    }
+    .fd__bg {
+        overflow-x: hidden;
+    }
+}
 
 @media only screen and (max-width: 1222px) {
+    .card__main .card {
+        margin-left: 0px;
+    }
+    .empty__cart {
+        padding: 0 10px;
+        img {
+            width: 300px;
+        }
+    }
+    .card__main {
+        width: 100%;
+        justify-content: space-between;
+    }
     .header {
-        // height: 65px;
         flex-wrap: wrap;
         li {
             margin-left: 50px;
@@ -19,11 +51,14 @@
     .cart__title {
         max-width: 200px;
     }
-    .footer__bottom {
+    footer {
         padding: 0px 70px;
     }
 }
 @media only screen and (max-width: 885px) {
+    .cart-dropdown {
+        right: 120px;
+    }
     .header {
         li {
             margin-left: 30px;
@@ -39,8 +74,11 @@
     .price__delivery {
         padding: 0 10px !important;
     }
-    .footer__bottom {
+    footer {
         padding: 0px 40px;
+    }
+    .empty__cart {
+        padding: 0 10px;
     }
     .contact__card {
         height: 250px !important;
@@ -57,6 +95,7 @@
     }
 }
 //tablet
+
 @media only screen and (max-width: 768px) {
     .header {
         li {
@@ -66,7 +105,7 @@
     .container {
         padding: 0px 12px;
     }
-    .nav__mid {
+    .nav__links {
         display: none;
         .cart__icon {
             display: block !important;
@@ -78,11 +117,11 @@
     .right__nav {
         display: flex;
     }
-    .footer__bottom .left__bot p {
+    footer.footer__nav p {
         margin-right: 25px !important;
         font-size: 14px;
     }
-    .footer__bottom {
+    footer {
         padding: 0px 30px;
     }
     .feature__subtitle {
@@ -113,6 +152,52 @@
     .total__div {
         width: 85% !important;
     }
+    .food__details {
+        .fd__bg {
+            overflow-x: hidden !important;
+            left: 6%;
+            width: 90%;
+            height: 80%;
+
+            .food__image {
+                width: 605px;
+                margin-top: 6px;
+                margin-left: 16px;
+            }
+            .food__infos {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #f5f5f5;
+                width: 100%;
+                height: 60%;
+                position: absolute;
+                bottom: 0;
+            }
+            .food__counter {
+                button {
+                    width: 30px !important;
+                    height: 30px !important;
+                }
+            }
+            .add__to__cart {
+                button {
+                    width: 60px !important ;
+                }
+            }
+            .sizes {
+                button {
+                    width: 97% !important;
+                }
+            }
+        }
+        span {
+            position: absolute;
+            top: 4%;
+            right: 10% !important;
+            font-size: 24px;
+            color: white;
+        }
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -129,16 +214,55 @@
             font-size: 26px !important;
         }
     }
+    .favorite__title {
+        font-size: 20px !important;
+    }
 }
 @media only screen and (max-width: 576px) {
-    .footer__bottom {
+    .popup {
+        height: 555px !important;
+    }
+    .card__main {
+        align-items: center;
+        .card {
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+    .favorite__cards {
+        width: 90% !important;
+    }
+    .tab__frame {
+        width: 90% !important;
+    }
+    .popup {
+        width: 90%;
+        height: 65%;
+    }
+    .input1 input {
+        width: 50%;
+    }
+    .food__image {
+        width: 400px !important;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
+    .hOQiSy {
+        height: 30vh !important;
+    }
+    .epKbGN {
+        top: 22% !important;
+    }
+
+    footer {
         padding: 0px 10px;
-        .left__bot {
+        .footer__nav {
             p {
                 margin-right: 10px !important;
             }
         }
-        .right__bot {
+        .footer__socials {
             li {
                 margin-left: 20px !important;
             }
@@ -148,39 +272,50 @@
         padding: 0px 7px;
     }
     .card {
-        width: 380px !important;
-        height: 550px !important;
+        margin-top: 16px !important;
+        width: 330px !important;
+        height: 530px !important;
         img {
             height: 100% !important;
         }
         .cart__icon {
-            left: 17px !important;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            left: 20px !important;
         }
     }
 
     .card__main {
         button {
-            width: 345px !important;
+            width: 295px !important;
             height: 47px !important;
         }
     }
     .contact__card {
-        // margin-left: 5px;
-        // margin-right: 5px;
         margin-left: 0px;
-
         height: 300px !important;
         width: 100% !important;
         margin-top: 20px;
         margin-right: 20px;
     }
+    .favorite__card {
+        img {
+            margin: 12px !important;
+        }
+    }
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 415px) {
+    .food__image {
+        width: 325px !important;
+        margin-top: 12px;
+        margin-left: 10px !important;
+    }
     .MuiBox-root button {
         margin-right: 5px !important;
     }
     .MuiBox-root button {
-        margin-right: 0px !important;
+        margin-right: -9px !important;
     }
     .cart {
         img {
@@ -188,7 +323,16 @@
             height: 100%;
         }
     }
+    .css-1vhircc {
+        width: 96%;
+    }
 }
+@media only screen and (max-width: 340px) {
+    .card__main button {
+        width: 275px !important;
+    }
+}
+
 //
 //
 //

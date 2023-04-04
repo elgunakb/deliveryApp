@@ -6,6 +6,7 @@ import Circle1 from "../assets/images/circle.svg";
 import Service1 from "../assets/images/service1.svg";
 import Service2 from "../assets/images/service2.svg";
 import Service3 from "../assets/images/service3.svg";
+import Footers from "../assets/images/Frame 135.svg";
 
 const Home = () => {
   const [food, setFood] = React.useState("All");
@@ -16,7 +17,7 @@ const Home = () => {
         <Carousel />
       </section>
       <div className="circle1">
-        <img src={Circle1} alt="" />
+        <img src={Circle1} alt="circle" />
       </div>
       <section className="section2">
         <div className="container">
@@ -27,35 +28,44 @@ const Home = () => {
             </div>
             <div className="feature__subtitle">
               <div>
-                <img src={Service1} alt="" />
+                <img
+                  style={{ width: "207px", height: "207px" }}
+                  src={Service1}
+                  alt="service_image"
+                />
                 <h3
                   style={{
                     color: "#ed1940",
                     fontSize: "30px",
-                    marginTop: "30px",
-                    marginLeft: "30px",
+                    // marginLeft: "30px",
                   }}
                 >
                   Easy to Order
                 </h3>
               </div>
               <div>
-                <img src={Service2} alt="" />
+                <img
+                  style={{ width: "207px", height: "207px" }}
+                  src={Service2}
+                  alt="service_image"
+                />
                 <h3
                   style={{
                     color: "#ed1940",
                     fontSize: "30px",
-                    marginTop: "30px",
                   }}
                 >
                   Best quality
                 </h3>
               </div>
               <div>
-                <img src={Service3} alt="" />
+                <img
+                  style={{ width: "207px", height: "207px" }}
+                  src={Service3}
+                  alt="service_image"
+                />
                 <h3
                   style={{
-                    marginTop: "2px",
                     color: "#ed1940",
                     fontSize: "30px",
                   }}
@@ -79,6 +89,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <img
+        className="container"
+        style={{ width: "100%" }}
+        src={Footers}
+        alt="footer"
+      />
     </div>
   );
 };
