@@ -7,9 +7,18 @@ import Line from "../assets/images/Vector 1788.svg";
 import EmptyCart from "../assets/images/emptycart__icon.svg";
 
 import "../style/pages/Cart.scss";
+<<<<<<< HEAD
+=======
+import { useDispatch, useSelector } from "react-redux";
+import { updateProductQuantity } from "../redux/actions/products";
+>>>>>>> 02919dd06b01f293e7e71971dc428ab5def615ee
 
 const Cart = () => {
   const { list, setList } = useContext(Context);
+
+  const dispatch = useDispatch();
+
+  const reduxList = useSelector((state) => state.list);
 
   const decrement = (id) => {
     setList((prevList) =>
@@ -17,6 +26,11 @@ const Cart = () => {
         item.id === id ? { ...item, quantity: item.quantity - 1 } : item
       )
     );
+    const newList = reduxList.map((item) =>
+      item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+    );
+
+    dispatch(updateProductQuantity(newList));
   };
 
   const increment = (id) => {
@@ -25,6 +39,10 @@ const Cart = () => {
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
+    const newList = reduxList.map((item) =>
+      item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    dispatch(updateProductQuantity(newList));
   };
 
   const total = list.reduce(
@@ -43,7 +61,11 @@ const Cart = () => {
             <div className="all__carts">
               <h2 className="shopping__cart">Shopping cart</h2>
               <img className="line" src={Line} alt="line" />
+<<<<<<< HEAD
               {list.map((item) => (
+=======
+              {reduxList.map((item) => (
+>>>>>>> 02919dd06b01f293e7e71971dc428ab5def615ee
                 <div className="carts" key={item.id}>
                   <div className="cart">
                     <img src={item.image01} alt="food_image" />

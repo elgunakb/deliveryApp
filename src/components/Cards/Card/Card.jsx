@@ -6,6 +6,11 @@ import Fav from "../../../assets/images/heart (2).png";
 import Fav2 from "../../../assets/images/heart (1).png";
 import { FaStar } from "react-icons/fa";
 import { PRODUCT_TYPES } from "../../../utils/constants";
+<<<<<<< HEAD
+=======
+import { useDispatch } from "react-redux";
+import { addProductToCart } from "../../../redux/actions/products";
+>>>>>>> 02919dd06b01f293e7e71971dc428ab5def615ee
 
 const sizes = ["small", "medium", "large"];
 
@@ -21,6 +26,11 @@ const CardItem = ({ item }) => {
   // const [showToast, setShowToast] = useState(false);
   const [favs, setFavs] = useState(Fav2);
 
+<<<<<<< HEAD
+=======
+  const dispatch=useDispatch();
+
+>>>>>>> 02919dd06b01f293e7e71971dc428ab5def615ee
   const addToFav = (e) => {
     if (favs === Fav) {
       setFavs(Fav2);
@@ -69,7 +79,13 @@ const CardItem = ({ item }) => {
             : listItem
         )
       );
+<<<<<<< HEAD
     } else {
+=======
+
+    } else {
+      dispatch(addProductToCart({ ...item, quantity: quantity }));
+>>>>>>> 02919dd06b01f293e7e71971dc428ab5def615ee
       setList([...list, { ...item, quantity: quantity }]);
       setNotificationProps({
         ...notificationProps,
