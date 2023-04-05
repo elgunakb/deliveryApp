@@ -1,11 +1,12 @@
-import "../style/pages/Cart.scss";
 import { Context } from "../context";
+import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import Btn from "../components/right/Btn";
 import DeleteBtn from "../assets/images/delete.svg";
 import Line from "../assets/images/Vector 1788.svg";
-import EmptyCart from "../assets/images/image 134.svg";
-import { Link } from "react-router-dom";
+import EmptyCart from "../assets/images/emptycart__icon.svg";
+
+import "../style/pages/Cart.scss";
 
 const Cart = () => {
   const { list, setList } = useContext(Context);
@@ -41,20 +42,21 @@ const Cart = () => {
           <>
             <div className="all__carts">
               <h2 className="shopping__cart">Shopping cart</h2>
-              <img className="line" src={Line} alt="" />
+              <img className="line" src={Line} alt="line" />
               {list.map((item) => (
                 <div className="carts" key={item.id}>
                   <div className="cart">
-                    <img src={item.image01} alt="" />
+                    <img src={item.image01} alt="food_image" />
                     <div className="cart__details">
                       <h5 className="cart__title">{item.title}</h5>
                       <button
                         className="delete__btn"
                         onClick={() => deleteItem(item.id)}
                       >
-                        <img src={DeleteBtn} alt="" />
+                        <img src={DeleteBtn} alt="delete_btn" />
                       </button>
                       <p>{item.price * item.quantity} ₼</p>
+                      
                     </div>
                     <div className="counter">
                       <button
@@ -85,10 +87,11 @@ const Cart = () => {
             </div>
             <div className="total__div">
               <h3 className="cart__sum">Cart Summary</h3>
-              <img className="line" src={Line} alt="" />
+              <img className="line" src={Line} alt="line" />
               <div className="price__delivery">
                 <p>Price</p>
-                <p>{total} ₼</p>
+
+                <p>{total.toFixed(2)} ₼</p>
               </div>
               <div className="price__delivery">
                 <p>Delivery</p>
@@ -98,7 +101,7 @@ const Cart = () => {
                 style={{ marginTop: "32px" }}
                 className="line"
                 src={Line}
-                alt=""
+                alt="line"
               />
               <div className="subtotal">
                 <p>Subtotal</p>
@@ -112,10 +115,10 @@ const Cart = () => {
         ) : (
           <div className={"total empty"}>
             <div className="empty__cart">
+              <img src={EmptyCart} alt="empty_cart" />
               <button>
                 <Link to="/home">Back to home</Link>
               </button>
-              <img src={EmptyCart} alt="" />
             </div>
           </div>
         )}

@@ -5,10 +5,12 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  /* z-index: 2; */
+  z-index: 999989999;
 }
 
 .popup {
+  
   position: absolute;
   top: 53%;
   left: 50%;
@@ -42,7 +44,6 @@
   cursor: pointer;
 }
 .inputs h6 {
-  /* font-weight: 600px; */
   display: flex;
   font-family: "Montserrat";
   font-style: normal;
@@ -95,30 +96,3 @@ input::placeholder {
   color: white;
   font-size: 16px;
 }
-/* .inputs {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-.inputs p {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
-
-
-  letter-spacing: 0.0015em;
-
-
-  color: #000000;
-}
-.inputs input {
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-}
-
-
-} */

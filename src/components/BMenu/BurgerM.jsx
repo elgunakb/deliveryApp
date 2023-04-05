@@ -1,13 +1,13 @@
-import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import BMIcon from "../../assets/images/menu (1).png";
 import { Link } from "react-router-dom";
+import * as React from "react";
 import "./styles.css";
+import Menu from "@mui/material/Menu";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import MenuItem from "@mui/material/MenuItem";
+import { styled, alpha } from "@mui/material/styles";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import BMIcon from "../../assets/images/burgerMenu.svg";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -74,7 +74,7 @@ export default function CustomizedMenus() {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
       >
-        <img src={BMIcon} alt="" />
+        <img src={BMIcon} alt="menu_button" />
       </Button>
       <StyledMenu
         id="demo-customized-menu"
@@ -86,9 +86,7 @@ export default function CustomizedMenus() {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose} disableRipple>
-          <Link style={{ color: "black" }} to="/home">
-            Home
-          </Link>
+          <Link to="/home">Home</Link>
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <Link style={{ color: "black" }} to="/cart">
@@ -96,7 +94,7 @@ export default function CustomizedMenus() {
           </Link>
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
+        <MenuItem disableRipple>
           <Link style={{ color: "black" }} to="/favorite">
             Favorite
           </Link>

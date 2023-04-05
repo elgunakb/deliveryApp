@@ -2,14 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .card__main {
-    height: 100%;
-    max-width: 100%;
+    // margin-left: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    width: 1150px;
+    margin: 0 auto;
+    padding-bottom: 20px;
     flex-direction: row;
-    cursor: pointer;
-    button {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    // margin-bottom: 20px;
+    // height: 100%;
+    // max-width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // // justify-content: space-evenly;
+    // justify-content: flex-start;
+    // align-items: stretch;
+    // flex-direction: row;
+    .buy__now {
         border: none;
         cursor: pointer;
         background-color: rgb(255, 67, 67);
@@ -28,16 +39,15 @@
     }
     .card {
         margin-right: 6px;
-        margin-left: 6px;
+        margin-left: 16px;
         border: 1px solid #f5f5f5;
         width: 258px;
         height: 368px;
-        margin-top: 28px;
+        margin-top: 16px;
         justify-content: space-evenly;
         position: relative;
         border-radius: 16px;
         background-color: #f5f5f5;
-
         &:hover {
             -webkit-box-shadow: 0px 0px 5px 0px rgba(190, 190, 190, 0.39);
             box-shadow: 0px 0px 5px 0px rgba(190, 190, 190, 0.39);
@@ -51,19 +61,26 @@
             border-bottom: 10px;
             width: 100%;
             height: 210px;
-            background-color: #ffffff;
+            background-color: #f5f5f5;
         }
         .product__content {
             margin-left: 17px;
             margin-top: 7px;
+            .content__top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
+            .favorite__icon {
+                width: 23px;
+                height: 22px;
+                margin-right: 16px;
+                color: #ff0000 !important;
+            }
             .title_ {
                 display: flex;
                 justify-content: space-between;
-            }
-            .fav__icon {
-                height: 23px;
-                width: 21px;
-                margin-right: 17px;
             }
             h5 {
                 font-family: "Montserrat", sans-serif;
@@ -94,7 +111,7 @@
             }
             .price__text {
                 margin-top: 16px;
-                font-family: Montserrat;
+                // font-family: Montserrat;
                 font-size: 12px;
                 font-weight: 600;
                 line-height: 16px;
@@ -103,5 +120,160 @@
                 color: #a0a0a0;
             }
         }
+    }
+    .content__mid {
+        display: flex;
+        justify-content: space-between;
+        .rating__style {
+            margin-right: 10px;
+        }
+    }
+}
+
+// FOOD MODAL
+
+.food__details {
+    background-color: rgba(25, 25, 25, 0.65);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    position: fixed;
+    cursor: default;
+    .fd__bg {
+        overflow-y: scroll;
+        position: absolute;
+        width: 60%;
+        height: 80%;
+        background-color: #fff;
+        top: 11%;
+        left: 22%;
+        display: flex;
+        border-radius: 5px;
+        .food__image {
+            width: 550px;
+            margin-top: 12px;
+            margin-left: 12px;
+        }
+        .food__infos {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: #f5f5f5;
+            width: 60%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            .food__info {
+                margin-left: 16px;
+                margin-right: 16px;
+                margin: 12px 16px 0px 16px;
+
+                .food__title {
+                    h5 {
+                        font-size: 36px;
+                    }
+                }
+                .food__desc {
+                    margin-top: 12px;
+                    p {
+                        font-size: 18px;
+                        color: #868686;
+                    }
+                }
+                .select__size {
+                    margin-top: 12px;
+                    p {
+                        letter-spacing: 0.001px;
+                        line-height: 5px;
+                        font-size: 18px;
+                        color: #585858;
+                        font-weight: bolder;
+                    }
+                }
+            }
+            .food__counter_price {
+                margin-top: 12px;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                align-items: center;
+                .food__counter {
+                    display: flex;
+
+                    p {
+                        text-align: center;
+                        align-items: center;
+                        padding: 5px 10px 0 10px;
+                        font-weight: bold;
+                        border: 1px solid rgba(154, 154, 154, 0.473);
+                    }
+                    button {
+                        cursor: pointer;
+
+                        background-color: red;
+                        width: 36px;
+                        height: 35px;
+                        border: none;
+                        color: #ffffff;
+                        font-weight: bold;
+                    }
+                }
+                .food__price {
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                .add__to__cart {
+                    button {
+                        font-weight: bold;
+                        width: 110px;
+                        height: 44px;
+                        border-radius: 4px;
+                        border: none;
+                        background-color: #ed1940;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .sizes {
+                margin-top: 12px;
+                button {
+                    margin-left: 6px;
+                    width: 32%;
+                    height: 75px;
+                    border: 1px solid #ed1940;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    color: #ed1940;
+                    cursor: pointer;
+                }
+                button.active {
+                    border: 1px dashed red;
+                }
+            }
+        }
+        textarea {
+            margin-top: 12px;
+            max-width: 100%;
+            max-height: 200px;
+            min-width: 100%;
+            min-height: 100px;
+            padding-left: 5px;
+            padding-top: 5px;
+            font-size: 16px;
+        }
+    }
+    .extra__add {
+        margin-top: 12px;
+    }
+    span {
+        position: absolute;
+        top: 6%;
+        right: 19%;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
     }
 }
